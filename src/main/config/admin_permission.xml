@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="permission" namespace="/permission" extends="default"> 
+		<action name="permissionManage">
+			<result name="success">/WEB-INF/web/permission/permissionList.jsp</result>
+		</action>
+		<action name="listPermission" class="com.sz7road.web.action.admin.permission.PermissionAction" method="listPermission">
+			<result name="success" type="json">
+				<param name="includeProperties">result</param>
+			</result>
+		</action>
+		<action name="addPermission" class="com.sz7road.web.action.admin.permission.PermissionAction" method="addPermission">
+			<result name="success">/WEB-INF/web/permission/addPermission.jsp</result>
+		</action>
+		<action name="addPermissionSubmit" class="com.sz7road.web.action.admin.permission.PermissionAction" method="addPermissionSubmit">
+			<result name="success" type="json">
+				<param name="includeProperties">result</param>
+			</result>
+		</action>
+		<action name="childPermissionManage" class="com.sz7road.web.action.admin.permission.PermissionAction" method="childPermissionManage">
+			<result name="success">/WEB-INF/web/permission/childPermissionList.jsp</result>
+		</action>
+		<action name="listChildPermission" class="com.sz7road.web.action.admin.permission.PermissionAction" method="listChildPermission">
+			<result name="success" type="json">
+				<param name="includeProperties">result</param>
+			</result>
+		</action>
+		<action name="editPermission" class="com.sz7road.web.action.admin.permission.PermissionAction" method="editPermission">
+			<result name="success">/WEB-INF/web/permission/editPermission.jsp</result>
+		</action>
+		<action name="editPermissionSubmit" class="com.sz7road.web.action.admin.permission.PermissionAction" method="editPermissionSubmit">
+			<result name="success" type="json">
+				<param name="includeProperties">result</param>
+			</result>
+		</action>
+		<action name="deletePermission" class="com.sz7road.web.action.admin.permission.PermissionAction" method="deletePermission">
+			<result name="success" type="json">
+				<param name="includeProperties">result</param>
+			</result>
+		</action>
+	</package>
+</struts>
