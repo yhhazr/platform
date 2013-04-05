@@ -152,6 +152,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>platform</finalName>
+		<finalName>platform2</finalName>
 	</build>
 </project>
